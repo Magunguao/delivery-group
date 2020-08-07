@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+      <div>
+        <div class="logo"></div>
+        <div class="slogan">
+            Прозорість.<br> Відповідальність.<br>Професіоналізм.
+        </div>
+      </div>
+      <div>
+        <button class="login">ВХІД</button>
+        <button class="register">Реєстрація</button>
+      </div>  
+    </header>
+    <div class="title">
+        <p>СТРАХОВА КОМПАНІЯ «КВОРУМ» НА СТОРОЖІ БЕЗПЕЧНИХ ПЕРЕВЕЗЕНЬ ВАНТАЖІВ</p>
+    </div>
+    <div class="task-block">
+      <h1 align="center"> Інформація одержувача </h1>
+      <h3 align="center"> Загальна сума для поповнення 100 грн.</h3>
+      <form id="form">
+        <div class="input-holder">
+          <span>+38</span>
+          <input type="text" required size="20" maxlength="10" onkeypress="return event.charCode >= 48 && event.charCode <= 57;" placeholder="Номер телефона">
+          <input id="sum1" type="number"  placeholder="Сумма" onkeypress="return event.charCode >= 48 && event.charCode <= 57;" onchange="if (this.value > 100) this.value = 100">
+          <input type="submit" id="form-submit" value="Оформить" onclick="checkSum()">   
+        </div>
+      </form>
+      <div class="add-input" onclick="addInput()">Добавить</div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
